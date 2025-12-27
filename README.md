@@ -1,12 +1,12 @@
 # Jose A Caparros-Martin — CV Website
 
-This repository hosts my personal CV/portfolio website (static site) and is deployed with GitHub Pages.
+This repository hosts my personal CV website and is deployed with GitHub Pages.
 
 ## Live site
-- User site: `https://<username>.github.io/`
-- Project site: `https://<username>.github.io/<repo>/`
+- User site: `https://jacapmar.github.io/`
+- Project site: `https://jacapmar.github.io/Jose-Caparros-Martin-cv`
 
-## What’s inside
+## What is inside
 ```text
 .
 ├─ index.html            # Main page
@@ -16,5 +16,5 @@ This repository hosts my personal CV/portfolio website (static site) and is depl
 │  ├─ img/
 │  │  └─ headshot.jpg    # Profile photo
 │  └─ docs/
-│     └─ Jose-CV.pdf     # Optional CV PDF
+│     └─ Jose-CV.pdf     # CV PDF
 └─ README.md
