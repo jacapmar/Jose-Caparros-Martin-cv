@@ -1,0 +1,98 @@
+
+/* Apply Google fonts load in <head> */
+body{
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  position: relative;
+}
+h1,h2,h3,h4,h5,h6,.navbar-brand{
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* NAVBAR (normal at top) */
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  transition: padding .3s ease, background-color .3s ease, box-shadow .3s ease;
+}
+
+/* NAVBAR when scrolled (shrinks) */
+#mainNav.navbar-shrink {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #212529;   /* dark */
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+/* HERO banner (dark gradient) */
+.masthead{
+  min-height: 60vh;
+  background:
+    radial-gradient(1200px 400px at 50% -20%, rgba(255,255,255,.2), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, #2f3b3b 0%, #0f1111 100%);
+  display: flex;
+  align-items: center;
+}
+
+/* Hero layout: photo + text */
+.hero-content{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;           /* stacked on mobile */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Side-by-side on large screens */
+@media (min-width: 992px){
+  .hero-content{
+    grid-template-columns: auto 1fr;    /* photo | text */
+    justify-items: start;
+  }
+}
+
+/* Headshot shown in hero */
+.hero-photo{
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  object-fit: cover; object-position: center;
+  border: 4px solid rgba(255,255,255,.25);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.25);
+}
+
+@media (min-width: 992px){
+  .hero-photo{ width: 260px; height: 260px; }
+}
+
+.hero-text h1{ line-height: 1.2; }
+
+/* Smooth anchor targeting so content isn’t hidden under navbar */
+section { scroll-margin-top: 90px; }
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  * { transition: none !important; }
+}
+
+/* Publications list */
+.pub-year{
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+.pub-items{
+  margin: .25rem 0 0 0;
+  padding-left: 1.2rem;
+}
+.pub-items li{
+  margin-bottom: .35rem;
+}
+
+/* Alternating section backgrounds */
+.section { background-color: #ffffff; }                 /* light */
+.section-alt { background-color: #f3f5f7; }             /* light gray */
+
+/* Scrollspy needs this when spying on <body> */
+body { position: relative; }
